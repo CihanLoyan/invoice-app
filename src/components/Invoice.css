@@ -2,13 +2,78 @@
     width: 450px;
     height: 430px;
     margin: 10px 58px 40px 70px;
-    padding: 30px;
+    padding: 0;
     border-radius: 35px;
-    background-color: #18c8f0;
+    background-color: #fffbb0;
     box-shadow: 15px 15px 5px 0px #575757; 
     cursor: pointer;
     /* 1. parametre x ekseninde, 2.'si y ekseninde gölge verir.  
        3. parametre gölgeye blur(yumuşaklık) verir ve 4. parametre de her tarafa gölge verir.
     */
     transition: 500ms transform;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.invoice .top {
+    border-bottom: 2px dotted #7e7c7c;
+    padding: 10px 0 10px 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.invoice .center {
+    border-bottom: 2px dotted #7e7c7c;
+    padding: 0 0 10px 0;
+    flex: 1;
+}
+
+.invoice .bottom {
+    flex: 1;
+}
+
+.top .invoice-no {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 40px 0 0;
+}
+
+.invoice-no h4 {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.top .companies {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.companies .from {
+    display: flex;
+    align-items: center;
+}
+
+.companies .from span {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.companies .bill-to {
+    display: flex;
+    align-items: center;
+}
+
+.companies .bill-to span {
+    margin-left: 10px;
+    font-size: 20px;
 }
