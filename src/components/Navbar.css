@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     font-family: 'Josefin Sans', sans-serif;
-    box-shadow: 0 2px 6px 0 rgba(38, 47, 40, 0.8);
+    box-shadow: 0 2px 6px 0 rgba(38, 47,    40, 0.8);
     padding: 10px;
     padding-left: 30px;
 }
@@ -23,6 +23,19 @@
     flex: 1;
     display: flex;
     justify-content: center;
+}
+
+.center ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.center ul li:first-child a:hover {
+    color: #15b9d6;
+}
+
+.center ul li:nth-child(2) a:hover {
+    color: #14e005; 
 }
 
 .right {
@@ -61,3 +74,4 @@ ul li {
     margin-right: 7px;
     color: #d00000;
 }
+

@@ -1,14 +1,27 @@
 import './App.css';
-import Home from './Pages/Home';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import invoices from './db/data';
+
+// Pages
+import Invoices from './Pages/Invoices';
+import CreateInvoice from './Pages/CreateInvoice';
+
+// Components
 import Navbar from './components/Navbar';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
+    <Router>
       <Navbar />
-      <Home />
-    </div>
-  );
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Invoices invoices={invoices}/>} />
+          <Route path="/create" element={<CreateInvoice />} />
+        </Routes>
+      </div>
+    </Router>
+  );  
 }
 
 export default App;

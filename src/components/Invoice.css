@@ -1,0 +1,14 @@
+.invoice {
+    width: 450px;
+    height: 430px;
+    margin: 10px 58px 40px 70px;
+    padding: 30px;
+    border-radius: 35px;
+    background-color: #18c8f0;
+    box-shadow: 15px 15px 5px 0px #575757; 
+    cursor: pointer;
+    /* 1. parametre x ekseninde, 2.'si y ekseninde gölge verir.  
+       3. parametre gölgeye blur(yumuşaklık) verir ve 4. parametre de her tarafa gölge verir.
+    */
+    transition: 500ms transform;
+}
