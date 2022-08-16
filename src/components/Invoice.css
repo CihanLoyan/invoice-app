@@ -1,16 +1,18 @@
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 .invoice {
     width: 450px;
-    height: 430px;
-    margin: 10px 58px 40px 70px;
-    padding: 0;
+    height: 500px;
+    padding: 10px 0 10px 0;
     border-radius: 35px;
-    background-color: #fffbb0;
+    background-color: #ecf0f1;
     box-shadow: 15px 15px 5px 0px #575757; 
     cursor: pointer;
     /* 1. parametre x ekseninde, 2.'si y ekseninde gölge verir.  
        3. parametre gölgeye blur(yumuşaklık) verir ve 4. parametre de her tarafa gölge verir.
     */
-    transition: 500ms transform;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -21,41 +23,51 @@ a {
     color: black;
 }
 
-.invoice .top {
-    border-bottom: 2px dotted #7e7c7c;
-    padding: 10px 0 10px 0;
+.invoice .invoice-info {
+    border-bottom: 1px dotted #7e7c7c;
+    padding: 0 0 10px 0;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.invoice .center {
-    border-bottom: 2px dotted #7e7c7c;
-    padding: 0 0 10px 0;
+.invoice .invoice-account {
     flex: 1;
 }
 
-.invoice .bottom {
-    flex: 1;
+.invoice-info .invoice-no-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dotted #7e7c7c;
+    padding-top: 10px;
+    padding-bottom: 10px
 }
 
-.top .invoice-no {
+.invoice-no-status .status {
+    padding-left: 40px;
+    font-weight: bold;
+}
+
+.invoice-info .invoice-no-status .invoice-no {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 10px 40px 0 0;
+    padding: 0 40px 0 0;
 }
 
-.invoice-no h4 {
+.invoice-no-status .invoice-no h4 {
     margin-left: 10px;
     font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
-.top .companies {
+.invoice-info .companies {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 15px 0 15px 0;
 }
 
 .companies .from {
@@ -64,7 +76,6 @@ a {
 }
 
 .companies .from span {
-    margin-left: 10px;
     font-size: 20px;
 }
 
@@ -74,6 +85,123 @@ a {
 }
 
 .companies .bill-to span {
-    margin-left: 10px;
     font-size: 20px;
+}
+
+.invoice .date {
+    padding: 10px 0 5px 0;
+}
+
+.invoice .date .invoice-date {
+    margin-bottom: 5px;
+}
+
+label {
+    font-family: 'Comfortaa', cursive;
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+span {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.invoice .invoice-detail {
+    flex: 1;
+    padding: 10px 30px 10px 30px;
+    border-bottom: 1px dotted #7e7c7c;
+}
+
+.invoice .invoice-detail h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.invoice .invoice-detail p {
+    text-align: justify;
+    overflow: hidden;  /* Taşan kısımları gizle */
+    text-overflow: ellipsis; /* Taşan kısımları temsil etmek için '...' koyar  */
+    display: -webkit-box;  
+    -webkit-box-orient: vertical; /* satırları dikey olarak sırala */
+    -webkit-line-clamp: 5;  /* Görünecek kısmı 3 satırla sınırladım */
+    word-break: break-all;
+}
+
+.invoice-account {
+    padding: 10px 30px;
+}
+
+.invoice-account .unit-qty-ext {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.unit-qty-ext span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.green {
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+}
+  
+.green::after {
+    font: var(--fa-font-solid);
+    content: " \f00c";
+    padding-right: 10px;
+}
+
+.red {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.red::after {
+    font: var(--fa-font-solid);
+    content: " \f00d";
+    padding-right: 10px;
+}
+
+.total-pay {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-pay .payment-type {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.total-pay .payment-type span {
+    font-size: 20px;
+}
+
+.total-pay .total-account {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: flex-end;
+}
+
+.total-account span {
+    font-size: 20px;
+}
+
+.total-account .tax {
+    margin: 10px 0 10px 0;
+}
+
+.total-account .tax span {
+    margin-left: 75px;
+}
+
+.total-account .total-price span  {
+    font-size: 25px;
 }
