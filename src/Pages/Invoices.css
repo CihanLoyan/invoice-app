@@ -4,5 +4,16 @@
     margin-top: 20px;
     padding: 20px;
     display: flex;
+    justify-content: flex-start;
     flex-wrap: wrap;
+}
+
+@media (max-width: 820px) {
+    .invoices {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
 }

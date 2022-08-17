@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const Invoice = ({invoice}) => {
   return (
     <>
-        <Link to={`/${invoice.invoiceNo}`} key={invoice.invoiceNo} >
-            <div className='invoice'>
+          <div className='invoice'>
+              <Link to={`/${invoice.invoiceNo}`} key={invoice.invoiceNo} >
                 <div className='invoice-info'>
                   <div className='invoice-no-status'>
                     <div className='status'>
@@ -89,8 +89,8 @@ const Invoice = ({invoice}) => {
                       </div>
                   </div>
                 </div>
-            </div>
-        </Link>
+              </Link>
+          </div>
     </>
   )
 }

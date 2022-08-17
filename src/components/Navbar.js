@@ -7,20 +7,24 @@ const Navbar = () => {
     <div className="navbar">
         <div className="left">
             <i class="fa-solid fa-receipt"></i>
-            <p>Invoicing App</p>
+            <h4>Invoicing App</h4>
         </div>
         <div className="center">
             <ul>
                 <li>
                     <Link to="/">
                         <i class="fa-solid fa-file-invoice"></i>
-                        Invoices
+                        <span className='show-invoices'>
+                            Invoices
+                        </span>
                     </Link>
                     </li>
                 <li>
                     <Link to="/create">
                         <i class="fa-solid fa-pen-to-square"></i>
-                        Create Invoice
+                        <span className="create-invoice">
+                            Create Invoice
+                        </span>
                     </Link>
                 </li>
             </ul>

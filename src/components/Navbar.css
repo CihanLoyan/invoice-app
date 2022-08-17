@@ -64,7 +64,7 @@ ul li {
     color: #14e005;
 }
 
-.left p {
+.left h4 {
     font-size: 25px;
     font-family: 'Righteous', cursive;
 }
@@ -75,3 +75,41 @@ ul li {
     color: #d00000;
 }
 
+@media (max-width: 820px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+    .navbar .center {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .right {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding-left: 20px;
+    }
+    .navbar .left {
+        padding-left: 0;
+    }
+    .navbar .left h4 {
+        font-size: 20px;
+    }
+
+    .navbar .center ul li:first-child {
+        margin-right: 10px;
+    }
+    .navbar .center ul li:nth-child(2) {
+        margin-right: 10px;
+    }
+    .navbar .center ul li span {
+        display: none;
+    }
+    .navbar .center ul li i {
+        font-size: 30px;
+    }
+}
