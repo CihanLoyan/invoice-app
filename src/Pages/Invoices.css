@@ -3,17 +3,38 @@
     margin: 0 auto;
     margin-top: 20px;
     padding: 20px;
+}
+
+.invoices .search-bar {
+    margin: 0px 40px 40px 40px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+}
+
+.invoices .search-bar input {
+    padding: 10px 70px;
+    border-radius: 35px;
+    outline: none;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.invoices .invoices-list {
+    display: flex;
     flex-wrap: wrap;
 }
 
 @media (max-width: 820px) {
-    .invoices {
+    .invoices-list {
         display: flex;
         justify-content: center;
     }
 }
 
 @media (max-width: 480px) {
+    .invoices .search-bar {
+        margin: 0px 40px 20px 40px;
+    }
 }

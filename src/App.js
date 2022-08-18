@@ -7,7 +7,7 @@ import Invoices from './Pages/Invoices';
 import CreateInvoice from './Pages/CreateInvoice';
 
 // Components
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar'
 
 
 const App = () => {
@@ -17,6 +17,7 @@ const App = () => {
       <div className="App">
         <Routes>
           <Route path="/" element={<Invoices invoices={invoices}/>} />
+          <Route path="/:id" element={<Invoices invoices={invoices}/>} />
           <Route path="/create" element={<CreateInvoice />} />
         </Routes>
       </div>

@@ -9,6 +9,9 @@
     box-shadow: 0 2px 6px 0 rgba(38, 47,    40, 0.8);
     padding: 10px;
     padding-left: 30px;
+    position: sticky; /* scroll yaptıkça sabit kalsın */
+    top: 0;
+    z-index: 999;
 }
 
 .left {
