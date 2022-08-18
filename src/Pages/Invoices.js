@@ -8,7 +8,6 @@ const Invoices = ({invoices}) => {
   const onChange = (event) => {
     setValue(event.target.value);
   }
-
   return (
     <div className='invoices'>
       <div className='search-bar'>

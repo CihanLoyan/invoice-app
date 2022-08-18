@@ -1,6 +1,6 @@
 const invoices = [
-    {
-        status: true,
+{
+    status: true,
         invoiceNo: 123,
         from: "Shift",
         billTo: "Onedio",
@@ -51,7 +51,7 @@ const invoices = [
         paymentType: "Credit Card",
     },
     {
-        status: true,
+        status: false,
         invoiceNo: 890,
         from: "Shift",
         billTo: "Onedio",

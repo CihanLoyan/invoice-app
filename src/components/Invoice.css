@@ -21,14 +21,30 @@
     transition: 500ms;
 }
 
+a {
+    transition: 500ms;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    opacity: .2;
+}
+
 .invoice:hover {
-    background-color: #e1e1e1;
     transform: translateY(0.5%);
 }
 
-a {
-    text-decoration: none;
-    color: black;
+.invoice .invoice-print {
+    display: none;
+}
+
+.invoice:hover .invoice-print {
+    display: flex;
+    position: absolute;
+    left: 188px;
+    top: 170px;
+    font-size: 120px;
 }
 
 .invoice .invoice-info {
@@ -214,16 +230,55 @@ span {
     font-size: 25px;
 }
 
+.invoice .invoice-print-button {
+    display: none;
+}
+
 @media (max-width: 820px) {
     .invoice {
+        height: 585px;
         margin-right: 0;
+    }
+
+    .invoice:hover .invoice-print {
+        display: none;
+    }
+
+    a:hover {
+        opacity: 1;
+    }
+
+    .invoice .invoice-print-button {
+        padding: 20px 30px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .invoice .invoice-print-button button {
+        display: flex;
+        align-items: center;
+        padding: 10px 70px;
+        border-radius: 15px;
+        transition: 500ms;
+    }
+    
+    .invoice .invoice-print-button button span {
+        font-size: 20px;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+    
+    .invoice .invoice-print-button button i {
+        font-size: 30px;
+        color: #15b9d6;
+        margin-right: 15px;
+        transition: 1000ms;
     }
 }
 
 @media (max-width: 480px) {
     .invoice {
         width: 350px;
-        height: 470px;
+        height: 550px;
     }
 
     .invoice .invoice-detail h4 {
@@ -236,17 +291,31 @@ span {
     .invoice .invoice-account {
         padding: 10px 20px;
     }
+
     .invoice .invoice-account .unit-qty-ext .unit-price {
         display: flex;
         flex-direction: column;
     }
+
     .invoice .invoice-account .unit-qty-ext .quantity {
         display: flex;
         flex-direction: column;
     }
+
     .invoice .invoice-account .unit-qty-ext .extras {
         display: flex;
         flex-direction: column;
     }
     
+    .invoice:hover .invoice-print {
+        display: none;
+    }
+
+    a:hover {
+        opacity: 1;
+    }
+
+    .invoice .invoice-print-button button {
+        padding: 7px 50px;
+    }
 }

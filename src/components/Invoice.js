@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useCallback, useRef } from 'react';
 import './Invoice.css';
 import { Link } from 'react-router-dom';
+import { useReactToPrint } from "react-to-print";
+
 const Invoice = ({invoice}) => {
+
+  const componentRef = useRef(null);
+
+  const reactToPrintContent = useCallback(() => {
+    return componentRef.current;
+  }, [componentRef.current]);
+
+  const handlePrint = useReactToPrint({
+    content: reactToPrintContent,
+  });
+
   return (
-    <>
-          <div className='invoice'>
-              <Link to={`/${invoice.invoiceNo}`} key={invoice.invoiceNo} >
+      <>    
+          <div className='invoice' ref={componentRef}>
+              <div className='invoice-print'>
+                <i class="fa-solid fa-file-pdf"></i>
+              </div>
+              <Link to={`/${invoice.invoiceNo}`} key={invoice.invoiceNo} onClick={handlePrint} >
                 <div className='invoice-info'>
                   <div className='invoice-no-status'>
                     <div className='status'>
@@ -88,6 +104,12 @@ const Invoice = ({invoice}) => {
                         </div>
                       </div>
                   </div>
+                </div>
+                <div className="invoice-print-button">
+                  <button onClick={handlePrint}>
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>Print to PDF</span>
+                  </button>
                 </div>
               </Link>
           </div>
