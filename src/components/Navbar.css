@@ -35,10 +35,12 @@
 
 .center ul li:first-child a:hover {
     color: #15b9d6;
+    opacity: 1;
 }
 
 .center ul li:nth-child(2) a:hover {
     color: #14e005; 
+    opacity: 1;
 }
 
 .right {

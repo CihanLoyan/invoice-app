@@ -3,11 +3,153 @@
     margin: 0 auto;
     margin-top: 20px;
     padding: 20px;
-    background-color: antiquewhite;
 }
 
 .create-invoice .invoice {
     margin: 0 auto;
     width: 500px;
-    height: 600px;
+    height: 670px;
+}
+
+.status {
+    display: flex;
+}
+
+.status label {
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+.invoice-no-status .invoice-no label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input {
+    padding: 5px 0;
+}
+
+.invoice .invoice-info .date input {
+    padding: 5px 20px;
+}
+
+.invoice .invoice-info .date .due-date label {
+    margin-right: 29px;
+}
+
+.invoice .invoice-detail .project-name {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.invoice .invoice-detail .project-name input {
+    padding: 5px 95px;
+}
+
+.invoice .invoice-detail .description {
+    display: flex;
+    align-items: center;
+}
+
+.invoice .invoice-detail .description label {
+    margin-right: 17px;
+}
+
+.invoice-account .unit-qty-ext input {
+    margin-top: 5px;
+}
+
+.invoice-account .total-pay .payment-type {
+    display: flex;
+    justify-content: center;
+    padding-left: 7px;
+}
+
+.invoice-account .total-pay .payment-type select {
+    padding: 5px 15px;
+    margin-top: 10px;
+}
+
+.invoice-create-button {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.invoice-create-button button {
+    display: flex;
+    align-items: center;
+    padding: 10px 70px;
+    border: 1px solid rgb(164, 164, 164);
+    border-radius: 15px;
+    transition: 500ms;
+}
+.invoice-create-button button:hover {
+    border-color: #14e005;
+    background-color: #14e005;
+    cursor: pointer;
+}
+
+.invoice-create-button button:hover span {
+    color: white;
+    font-weight: bold;
+}
+
+.invoice .invoice-create-button button span {
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+@media (max-width: 820px) {
+    .create-invoice .invoice {
+        height: 680px;
+    }
+    .invoice .invoice-detail .project-name input {
+        padding: 5px 93px;
+    }
+}
+
+@media (max-width: 480px) {
+    .create-invoice .invoice {
+        width: 340px;
+        height: 700px;
+    }
+    input {
+        padding: 2px 0;
+    }
+    .invoice-info .invoice-no-status .status {
+        padding-left: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+    .invoice-info .invoice-no-status label {
+        margin-bottom: 5px;
+    }
+    .invoice-info .invoice-no-status .status select {
+        padding: 2.5px 15px;
+    }
+    .invoice-info .invoice-no-status .invoice-no {
+        display: flex;
+        flex-direction: column;
+        padding-right: 15px;
+    }
+    .invoice .invoice-detail .project-name input {
+        padding: 5px 15px;
+    }
+    .invoice-info .companies .from {
+        display: flex;
+        flex-direction: column;
+    }
+    .invoice-info .companies .bill-to {
+        display: flex;
+        flex-direction: column;
+    }
+    .invoice-info .companies label {
+        margin-bottom: 5px;
+    }
+    .invoice-account .unit-qty-ext input {
+        padding: 5px 0;
+        font-size: 8px;
+    }
 }

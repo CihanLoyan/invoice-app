@@ -278,7 +278,7 @@ span {
 @media (max-width: 480px) {
     .invoice {
         width: 350px;
-        height: 550px;
+        height: 580px;
     }
 
     .invoice .invoice-detail h4 {

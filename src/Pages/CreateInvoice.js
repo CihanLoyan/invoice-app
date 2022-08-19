@@ -15,8 +15,8 @@ const CreateInvoice = () => {
                         </select>
                       </div>
                       <div className='invoice-no'>
-                        <span>Invoice Number:</span>
-                        <input type="text" placeholder="Invoice Number"></input>
+                        <label>Invoice Number:</label>
+                        <input type="number" size="5" placeholder="Invoice Number"></input>
                       </div>
                     </div>
                     <div className="companies">
@@ -41,10 +41,14 @@ const CreateInvoice = () => {
                     </div>
                   </div>
                   <div className='invoice-detail'>
-                    <label>Project Name: </label>
-                    <input type="text" />
-                    <label>Description</label>
-                    <textarea></textarea>
+                    <div className='project-name'>
+                      <label>Project Name: </label>
+                      <input type="text" />
+                    </div>
+                    <div className='description'>
+                      <label>Description: </label>
+                      <textarea cols="55" rows="5"></textarea>
+                    </div>
                   </div>
                   <div className='invoice-account'>
                     <div className='unit-qty-ext'>
@@ -87,9 +91,8 @@ const CreateInvoice = () => {
                         </div>
                     </div>
                   </div>
-                  <div className="invoice-print-button">
+                  <div className="invoice-create-button">
                     <button>
-                      <i class="fa-solid fa-file-pdf"></i>
                       <span>Create</span>
                     </button>
                   </div>

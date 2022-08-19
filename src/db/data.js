@@ -1,6 +1,6 @@
 const invoices = [
 {
-    status: true,
+        status: true,
         invoiceNo: 123,
         from: "Shift",
         billTo: "Onedio",
