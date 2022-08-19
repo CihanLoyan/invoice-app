@@ -22,7 +22,7 @@ const Navbar = () => {
                     <li>
                         <Link to="/create">
                             <i class="fa-solid fa-pen-to-square"></i>
-                            <span className="create-invoice">
+                            <span className="create-new-invoice">
                                 Create Invoice
                             </span>
                         </Link>
