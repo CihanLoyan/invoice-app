@@ -1,9 +1,14 @@
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import './Invoice.css';
 import { Link } from 'react-router-dom';
 import { useReactToPrint } from "react-to-print";
 
 const Invoice = ({invoice}) => {
+
+  const getSubTotal = (invoice) => {
+    let subTotal = (invoice.unitPrice * invoice.quantity) + invoice.extras
+    return subTotal;
+  }
 
   const componentRef = useRef(null);
 
@@ -92,7 +97,7 @@ const Invoice = ({invoice}) => {
                       <div className='total-account'>
                         <div className='sub-total'>
                           <label>SubTotal:</label>
-                          <span>{`$${invoice.subTotal}`}</span>
+                          <span>{`$${getSubTotal(invoice)}`}</span>
                         </div>
                         <div className='tax'>
                           <label>Tax:</label>
@@ -100,7 +105,7 @@ const Invoice = ({invoice}) => {
                         </div>
                         <div className='total-price'>
                           <label>TOTAL:</label>
-                          <span>{`$${invoice.totalPrice}`}</span>
+                          <span>{`$${getSubTotal(invoice) + (getSubTotal(invoice) * invoice.taxRate / 100)}`}</span>
                         </div>
                       </div>
                   </div>
